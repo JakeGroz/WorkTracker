@@ -7,11 +7,12 @@ namespace WorkTracker.Models
 {
     public class Employee : Person
     {
-        static private int empId = 0;
+        public string empId;
         public string contactNumber { get; set; }
-        public List<TimeTrack> timeTracks;
-        public Employee(string firstName, string lastName) : base(firstName, lastName)
+        public Dictionary<DateTime, TimeTrack> timeTracks;
+        public Employee(string empId, string firstName, string lastName) : base(firstName, lastName)
         {
+            this.empId = empId;
 
         }
 
@@ -22,7 +23,7 @@ namespace WorkTracker.Models
 
         public void addTimeTrack(TimeTrack tt)
         {
-            timeTracks.Add(tt);
+            timeTracks.Add(tt.startTime, tt);
         }
     }
 }

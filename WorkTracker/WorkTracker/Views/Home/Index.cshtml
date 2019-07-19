@@ -2,8 +2,11 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>App to track time and various work related tasks.</a>.</p>
-    <button class="btn btn-primary btn-group-lg" asp-action="DashBoard">Begin</button>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>App to track time and various work related tasks.</a>.</p>
+
+        <form asp-controller="Home" asp-action="HomeDashboard">
+            <button class="btn btn-primary btn-lg">Begin</button>
+        </form>
+    </div>

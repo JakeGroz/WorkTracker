@@ -15,7 +15,7 @@ namespace WorkTracker.Controllers
             return View();
         }
 
-        public IActionResult Dashboard()
+        public IActionResult HomeDashboard()
         {
             return View();
         }

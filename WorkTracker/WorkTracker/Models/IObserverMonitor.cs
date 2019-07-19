@@ -5,11 +5,7 @@ using System.Threading.Tasks;
 
 namespace WorkTracker.Models
 {
-    public class Dashboard
+    interface IObserverMonitor
     {
-
-        public Dashboard()
-        {
-        }
     }
 }

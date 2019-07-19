@@ -7,10 +7,10 @@ namespace WorkTracker.Models
 {
     public class TimeTrack
     {
-        private DateTime startTime { get; set; }
-        private DateTime endTime { get; set; }
-        private List<DateTime> breakStartTimes { get; }
-        private List<DateTime> breakEndTimes { get; }
+        public DateTime startTime { get; set; }
+        public DateTime endTime { get; set; }
+        public List<DateTime> breakStartTimes { get; }
+        public List<DateTime> breakEndTimes { get; }
 
         public void addBreakStartTime (DateTime time)
         {
