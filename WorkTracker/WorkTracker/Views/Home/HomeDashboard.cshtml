@@ -1,31 +1,36 @@
 ﻿
 @model HomeDashboard
 
-<h1>Dashboard</h1>
+    <div class="text-center border border-light p-5">
 
-<table class="table">
-    <thread class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Title</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-        </tr>
-    </thread>
-    <tbody>
+        <p class="h4 mb-4">Dashboard</p>
 
-        @foreach (KeyValuePair<string, Employee> mon in Model.peopleMonitors)
-        {
-            <tr>
-                <td scope="row">@mon.Value.empId</td>
-                <td>@mon.Value.firstName @mon.Value.lastName</td>
-                <td>@mon.Value.jobTitle</td>
-                <td><button class="btn btn-outline-primary">View</button></td>
-                <td><button class="btn btn-outline-danger">Delete</button></td>
-            </tr>
-        }
-    </tbody>
-</table>
+        <table class="table">
+            <thread class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Title</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thread>
+            <tbody>
 
-<button asp-controller="HomeController" asp-action="AddEmployeeForm" class="btn btn-primary btn-lg btn-block">Add Employee</button>
+                @foreach (KeyValuePair<string, Employee> mon in Model.peopleMonitors)
+                {
+                    <tr>
+                        <td scope="row">@mon.Value.empId</td>
+                        <td>@mon.Value.firstName @mon.Value.lastName</td>
+                        <td>@mon.Value.jobTitle</td>
+                        <td><button class="btn btn-outline-primary">View</button></td>
+                        <td><button class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <form method="get" asp-controller="Home" asp-action="AddEmployeeForm">
+            <button class="btn btn-md btn-outline-info waves-effect btn-block">Add Employee</button>
+        </form>
+    </div>

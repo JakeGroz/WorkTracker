@@ -1,46 +1,35 @@
 ﻿
 @{
-    ViewData["Title"] = "AddEmployeeForm";
+    ViewData["Title"] = "Enter Employee Details";
 }
 
-<h1>AddEmployeeForm</h1>
+<!-- Default form register -->
+<form class="text-center border border-light p-5" asp-action="AddEmployee">
 
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1"></span>
-    </div>
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-</div>
+    <p class="h4 mb-4">Enter Employee Details</p>
 
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-    <div class="input-group-append">
-        <span class="input-group-text" id="basic-addon2">example.com</span>
+    <div class="form-row mb-4">
+        <div class="col">
+            <!-- First name -->
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+        </div>
     </div>
-</div>
 
-<label for="basic-url">Your vanity URL</label>
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-    </div>
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-</div>
+    <!-- Job Title -->
+    <input type="text" id="defualtRegisterFormText" class="form-control mb-4" placeholder="Job Title">
 
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text">$</span>
-    </div>
-    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-    <div class="input-group-append">
-        <span class="input-group-text">.00</span>
-    </div>
-</div>
+    <!-- E-mail -->
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
 
-<div class="input-group">
-    <div class="input-group-prepend">
-        <span class="input-group-text">With textarea</span>
-    </div>
-    <textarea class="form-control" aria-label="With textarea"></textarea>
-</div>
+    <!-- Phone number -->
+    <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
 
+
+    <!-- Sign up button -->
+    <button class="btn btn-md btn-outline-info waves-effect my-4 btn-block" type="submit">Submit</button>
+
+</form>

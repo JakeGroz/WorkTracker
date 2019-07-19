@@ -44,6 +44,15 @@ namespace WorkTracker.Controllers
             return View();
         }
 
+        public IActionResult AddEmployee(string inp)
+        {
+
+            tempz model = new tempz();
+            model.testvar = inp;
+
+            return View(model);
+        }
+
         public IActionResult Privacy()
         {
             return View();
