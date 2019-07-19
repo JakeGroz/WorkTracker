@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 
 namespace WorkTracker.Models
 {
-    public class HomeDashboard : IDashboard
+    public class HomeDashboard
     {
-        private Dictionary<string, IObserverMonitor> peopleMonitors = new Dictionary<string, IObserverMonitor>();
+        public Dictionary<string, Employee> peopleMonitors = new Dictionary<string, Employee>();
+
         public HomeDashboard() {
+
+
         }
 
         public void DeleteMonitor(string key) {
@@ -18,6 +21,11 @@ namespace WorkTracker.Models
         public void AddMonitor(Employee monitor) {
             peopleMonitors.Add(monitor.empId, monitor);
         }
+
+        //public Dictionary<string, IObserverMonitor> Gm()
+        //{
+        //    return this.peopleMonitors;
+        //}
 
     }
 }

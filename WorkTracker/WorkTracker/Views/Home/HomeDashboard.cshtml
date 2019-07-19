@@ -1,5 +1,31 @@
 ﻿
 @model HomeDashboard
 
-<h1>Overview</h1>
+<h1>Dashboard</h1>
 
+<table class="table">
+    <thread class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Title</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thread>
+    <tbody>
+
+        @foreach (KeyValuePair<string, Employee> mon in Model.peopleMonitors)
+        {
+            <tr>
+                <td scope="row">@mon.Value.empId</td>
+                <td>@mon.Value.firstName @mon.Value.lastName</td>
+                <td>@mon.Value.jobTitle</td>
+                <td><button class="btn btn-outline-primary">View</button></td>
+                <td><button class="btn btn-outline-danger">Delete</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button asp-controller="HomeController" asp-action="AddEmployeeForm" class="btn btn-primary btn-lg btn-block">Add Employee</button>

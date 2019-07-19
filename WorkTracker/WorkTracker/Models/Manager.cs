@@ -14,9 +14,6 @@ namespace WorkTracker.Models
             this.managerId = manId;
         }
 
-}
-
-
-       
     }
+
 }

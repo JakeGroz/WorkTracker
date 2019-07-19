@@ -7,9 +7,10 @@ namespace WorkTracker.Models
 {
     public class Employee : Person
     {
-        public string empId;
-        public string contactNumber { get; set; }
-        public Dictionary<DateTime, TimeTrack> timeTracks;
+        public string empId { get; }
+        public string contactNumber;
+        public Dictionary<DateTime, TimeTrack> timeTracks { get; }
+        public string jobTitle { get; set; }
         public Employee(string empId, string firstName, string lastName) : base(firstName, lastName)
         {
             this.empId = empId;
@@ -23,7 +24,11 @@ namespace WorkTracker.Models
 
         public void addTimeTrack(TimeTrack tt)
         {
-            timeTracks.Add(tt.startTime, tt);
+            this.timeTracks.Add(tt.startTime, tt);
+        }
+
+        public void updateJobTitle(string job) {
+            this.jobTitle = job;
         }
     }
 }
